@@ -29,7 +29,7 @@ package com.metsci.glimpse.support.color;
 import java.awt.Color;
 import java.text.ParseException;
 
-import javax.media.opengl.GL;
+import com.jogamp.opengl.GL;
 
 import com.metsci.glimpse.com.jogamp.opengl.util.awt.TextRenderer;
 

@@ -34,7 +34,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Objects;
 
-import javax.media.opengl.GL;
+import com.jogamp.opengl.GL;
 
 import com.metsci.glimpse.context.GlimpseBounds;
 import com.metsci.glimpse.context.GlimpseContext;
@@ -130,9 +130,9 @@ public class GlimpseLayoutDelegate implements ComponentWrapper, ContainerWrapper
 
     public void paintTo( GlimpseContext context )
     {
-        final int[] scale = context.getSurfaceScale( );
-        final int scaleX = scale[0];
-        final int scaleY = scale[1];
+        final float[] scale = context.getSurfaceScale( );
+        final int scaleX = (int)scale[0];
+        final int scaleY = (int)scale[1];
         GL gl = context.getGL( );
 
         GlimpseBounds bounds = context.getTargetStack( ).getBounds( );

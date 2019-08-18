@@ -43,8 +43,8 @@ import java.awt.image.BufferedImage;
 import java.util.Collection;
 import java.util.logging.Logger;
 
-import javax.media.opengl.GLAnimatorControl;
-import javax.media.opengl.GLProfile;
+import com.jogamp.opengl.GLAnimatorControl;
+import com.jogamp.opengl.GLProfile;
 import javax.swing.JPanel;
 
 import com.metsci.glimpse.context.GlimpseContext;

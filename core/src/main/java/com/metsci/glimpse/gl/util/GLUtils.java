@@ -26,13 +26,13 @@
  */
 package com.metsci.glimpse.gl.util;
 
-import javax.media.opengl.GL;
-import javax.media.opengl.GL3;
-import javax.media.opengl.GLCapabilities;
-import javax.media.opengl.GLContext;
-import javax.media.opengl.GLDrawableFactory;
-import javax.media.opengl.GLOffscreenAutoDrawable;
-import javax.media.opengl.GLProfile;
+import com.jogamp.opengl.GL;
+import com.jogamp.opengl.GL3;
+import com.jogamp.opengl.GLCapabilities;
+import com.jogamp.opengl.GLContext;
+import com.jogamp.opengl.GLDrawableFactory;
+import com.jogamp.opengl.GLOffscreenAutoDrawable;
+import com.jogamp.opengl.GLProfile;
 
 import com.jogamp.opengl.util.FPSAnimator;
 import com.metsci.glimpse.canvas.GlimpseCanvas;
@@ -276,9 +276,9 @@ public class GLUtils
 
     public static void setViewportAndScissor( GlimpseContext context )
     {
-        final int[] scale = context.getSurfaceScale( );
-        final int scaleX = scale[0];
-        final int scaleY = scale[1];
+        final float[] scale = context.getSurfaceScale( );
+        final int scaleX = (int)scale[0];
+        final int scaleY = (int)scale[1];
         GL gl = context.getGL( );
 
         GlimpseBounds bounds = context.getTargetStack( ).getBounds( );

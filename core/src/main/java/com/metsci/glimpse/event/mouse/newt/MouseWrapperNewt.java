@@ -47,9 +47,9 @@ public class MouseWrapperNewt extends MouseWrapperImpl<MouseEvent> implements Mo
         super( canvas );
 
         this.glWindow = canvas.getGLWindow( );
-        int[] scale = canvas.getSurfaceScale( );
-        this.scaleX = scale[0];
-        this.scaleY = scale[1];
+        float[] scale = canvas.getSurfaceScale( );
+        this.scaleX = (int)scale[0];
+        this.scaleY = (int)scale[1];
     }
 
     @Override
